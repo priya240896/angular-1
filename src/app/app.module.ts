@@ -1,4 +1,3 @@
-import {environment} from './../environments/environment';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -24,7 +23,17 @@ import { LoginComponent } from './login/login.component';
 
 @NgModule({ 
   imports:      [ BrowserModule, FormsModule,
-  AngularFireModule.initializeApp(environment.firebase),
+  AngularFireModule.initializeApp({ 
+    apiKey: "AIzaSyCV2nM9AcwyxyTFIEZhCsXo__gyCild5lA",
+  authDomain: "angular-cdzsej-60007.firebaseapp.com",
+  databaseURL: "https://angular-cdzsej-60007.firebaseio.com",
+  projectId: "angular-cdzsej-60007",
+  storageBucket: "angular-cdzsej-60007.appspot.com",
+  messagingSenderId: "324469911241",
+  appId: "1:324469911241:web:be2dabe5ff036bded0a718",
+  measurementId: "G-7RG1KND8GF"
+   
+    }),
   AngularFireDatabaseModule,
   AngularFireAuthModule,
    NgbModule,
